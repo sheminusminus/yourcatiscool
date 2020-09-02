@@ -58,6 +58,7 @@ function App() {
             className={c}
             onClick={handleClick}
             style={{
+              cursor: 'pointer',
               marginTop: '-2px',
               fontSize: '10px',
               fontWeight: 'bold',

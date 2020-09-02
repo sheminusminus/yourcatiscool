@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+.copy {
+  background-color: rgba(14, 188, 243, 0.1);
+  color: rgb(14, 188, 243);
+  border-color: rgb(14, 188, 243);
+}
+
+.copied {
+  background-color: rgba(41, 186, 165, 0.1);
+  border-color: rgb(41, 186, 165);
+  color: rgb(41, 186, 165);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

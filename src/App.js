@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   const [text, setText] = React.useState('COPY');
   const [c, setC] = React.useState('copy');
+  const inputEl = React.useRef();
 
   const handleClick = React.useCallback(() => {
     const copyText = document.getElementById('email');
@@ -33,7 +34,7 @@ function App() {
           <br />
           <a
             className="App-link"
-            href="mailto:hi@yourcatiscool.com"
+            href="mailto:hi@yourcatiscool.com?subject=my cat is cool!"
             style={{
               display: 'inline-block',
               paddingTop: '4px',
@@ -42,6 +43,7 @@ function App() {
             <input
               id="email"
               value="hi@yourcatiscool.com"
+              ref={inputEl}
               style={{
                 cursor: 'pointer',
                 color: '#61dafb',
@@ -51,6 +53,7 @@ function App() {
                 border: '0',
                 fontSize: '18px',
               }}
+              onFocus={() => inputEl.current.blur()}
             />
           </a>
           {' '}
@@ -70,7 +73,7 @@ function App() {
               borderStyle: 'solid',
               // color: 'rgb(41, 186, 165)',
               borderRadius: '2px',
-              width: '53px',
+              width: '64px',
             }}
           >
             {text}

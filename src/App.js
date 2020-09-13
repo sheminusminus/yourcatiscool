@@ -1,5 +1,6 @@
 import React from 'react';
 import cat from './cat.png';
+import catWink from './cat_wink.jpg';
 import './App.css';
 
 function App() {
@@ -25,12 +26,21 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={cat} className="App-logo" alt="cat" />
         <p>
           your cat is the coolest
         </p>
-        <p style={{ fontSize: '18px' }}>
-          feel free to email us sometime 🙂
+        <div
+          className="images"
+        >
+          <div className="cat">
+            <img src={cat} className="App-logo" alt="cat" />
+          </div>
+          <div className="cat">
+            <img src={catWink} className="App-logo" alt="cat" />
+          </div>
+        </div>
+        <p style={{ fontSize: '18px', marginBottom: '0' }}>
+          feel free to email us sometime <span role="img" aria-label="Cat smile">😸</span>
           <br />
           <a
             className="App-link"
@@ -41,6 +51,7 @@ function App() {
             }}
           >
             <input
+              readOnly
               id="email"
               value="hi@yourcatiscool.com"
               ref={inputEl}
